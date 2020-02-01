@@ -5,6 +5,8 @@ object MainRunner {
 //    val x = Plusminus(enter)
 //    x.plusMinus
 //    staircase(7)
+    miniMaxSum(Array(9,9,8,9,4))
+
   }
 
   def DiagonalDifference(matrix: Array[Array[Int]]) = {
@@ -52,8 +54,22 @@ object MainRunner {
     }
   }
 
+  def miniMaxSumByMahdi(arr: Array[Int]): Unit = {
+    val sum = arr.sum
+    println(sum)
+    val indices=Range.inclusive(0,arr.length-1).toList
+    val all=indices.map(e=>sum-arr(e))
+    println(Array(all.min,all.max).toList)
+  }
+
+
+  def miniMaxSum(arr: Array[Int])= {
+    val sum=arr.sum
+    val newarr=arr.map{a => sum-a}
+    var my_itter=newarr.iterator
+    println(my_itter.min)
+    var my_itter2=newarr.iterator
+    println(my_itter2.max)
+  }
+
 }
-
-
-
-
