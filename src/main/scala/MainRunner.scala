@@ -5,7 +5,7 @@ object MainRunner {
 //    val x = Plusminus(enter)
 //    x.plusMinus
 //    staircase(7)
-    miniMaxSum(Array(9,9,8,9,4))
+    miniMaxSum(Array(396285104, 573261094, 759641832, 819230764, 364801279))
 
   }
 
@@ -54,16 +54,17 @@ object MainRunner {
     }
   }
 
-  def miniMaxSumByMahdi(arr: Array[Int]): Unit = {
-    val sum = arr.sum
+  def miniMaxSumLong(arr: Array[Int]): Unit = {
+    val _arr=arr.map(a => a.toLong)
+    val sum = _arr.sum
     println(sum)
-    val indices=Range.inclusive(0,arr.length-1).toList
-    val all=indices.map(e=>sum-arr(e))
+    val indices=Range.inclusive(0,_arr.length-1).toList
+    val all=indices.map(e=>sum-_arr(e))
     println(Array(all.min,all.max).toList)
   }
 
 
-  def miniMaxSum(arr: Array[Int])= {
+  def miniMaxSumBySarah(arr: Array[Int])= {
     val sum=arr.sum
     val newarr=arr.map{a => sum-a}
     var my_itter=newarr.iterator
